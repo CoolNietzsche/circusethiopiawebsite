@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Source Serif 4", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, serif;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-cormorant: "Cormorant Garamond", Georgia, serif;
+  --font-cinzel: "Cinzel", "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --color-circus-bg: #0D0A05;
+  --color-circus-gold: #C8963E;
+  --color-circus-red: #B5292A;
+  --color-circus-cream: #F2E8D5;
+  --color-circus-teal: #1A7A6E;
+  --color-circus-text: #EDE8DF;
+}
+
+/* Custom global styles */
+html {
+  scroll-behavior: smooth;
+  background-color: #0D0A05;
+  color: #EDE8DF;
+}
+
+body {
+  font-family: var(--font-serif);
+  overflow-x: hidden;
+  background-color: #0D0A05;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0A05;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C8963E33;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C8963E88;
+}
+
+/* Circus Tent Spotlight Sweep Animation */
+@keyframes spotlightSweep {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.spotlight-radial {
+  background: radial-gradient(circle at 50% 30%, rgba(200, 150, 62, 0.15) 0%, rgba(13, 10, 5, 0) 60%),
+              radial-gradient(circle at 10% 80%, rgba(181, 41, 42, 0.08) 0%, rgba(13, 10, 5, 0) 50%);
+}
+
+.spotlight-beam {
+  background: linear-gradient(135deg, rgba(200, 150, 62, 0.15) 0%, rgba(13, 10, 5, 0) 40%);
+}
+
+/* Geometric repeating border pattern (Ethiopian netela woven aesthetics) */
+.ethiopian-border {
+  background-image: repeating-linear-gradient(45deg, #C8963E, #C8963E 2px, transparent 2px, transparent 8px);
+}
+
+.ethiopian-pattern {
+  background-color: #0d0a05;
+  background-image: 
+    radial-gradient(#C8963E 0.5px, transparent 0.5px), 
+    radial-gradient(#C8963E 0.5px, #0d0a05 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  opacity: 0.04;
+}
+
+/* Shimmer pulse effect for headers and buttons */
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-gold {
+  background: linear-gradient(90deg, #C8963E 0%, #F2E8D5 50%, #C8963E 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldShimmer 6s linear infinite;
+}
+
+/* Custom glow effects */
+.glow-gold {
+  box-shadow: 0 0 15px rgba(200, 150, 62, 0.25);
+}
+
+.glow-gold-hover:hover {
+  box-shadow: 0 0 25px rgba(200, 150, 62, 0.5);
+  transform: translateY(-2px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glow-red-hover:hover {
+  box-shadow: 0 0 25px rgba(181, 41, 42, 0.5);
+  transform: translateY(-2px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

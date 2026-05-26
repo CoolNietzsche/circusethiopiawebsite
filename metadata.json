@@ -1,0 +1,6 @@
+{
+  "name": "Circus Ethiopia",
+  "description": "The official website and surprise redesign for Circus Ethiopia, empowering young Ethiopians through circus arts. Dedicated to Founding Director Sosina Wogayehu, featuring the new Circus Center in Addis Ababa, Entoto Park.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
